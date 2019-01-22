@@ -15,6 +15,7 @@ end
 def prompt_user
   # code #prompt_user here
   puts"Type 'h' to hit or 's' to stay"
+
 end
 
 def get_user_input
@@ -22,16 +23,32 @@ def get_user_input
   gets.chomp
 end
 
-def end_game
+def end_game(get_user_input)
   # code #end_game here
+  apology ="Sorry"
+   card_total = get_user_input
+  thank_you_message = "Thanks for playing!"
+
+  puts "#{apology}, you hit #{card_total}. #{thank_you_message}"
 end
 
 def initial_round
   # code #initial_round here
+  new_sum = deal_card
+  new_sum += deal_card
+  return new_sum
+  puts"Your cards add up to #{new_sum}"
 end
 
-def hit?
+def hit?(display_card_total)
   # code hit? here
+  prompt_user
+  get_user_input
+  # if get_user_input =='h'
+  #   deal_card
+  # end
+  return display_card_total
+
 end
 
 def invalid_command
@@ -46,3 +63,4 @@ def runner
   # code runner here
   welcome
 end
+98
