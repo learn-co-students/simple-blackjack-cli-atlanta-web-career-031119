@@ -32,12 +32,12 @@ def end_game(get_user_input)
   puts "#{apology}, you hit #{card_total}. #{thank_you_message}"
 end
 
-def initial_round
+def initial_round()
   # code #initial_round here
   new_sum = deal_card
   new_sum += deal_card
   return new_sum
-  puts"Your cards add up to #{new_sum}"
+  puts"#{new_sum}"
 end
 
 def hit?(display_card_total)
