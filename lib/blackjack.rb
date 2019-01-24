@@ -26,7 +26,7 @@ end
 def end_game(get_user_input)
   # code #end_game here
   apology ="Sorry"
-   card_total = get_user_input
+  card_total = get_user_input
   thank_you_message = "Thanks for playing!"
 
   puts "#{apology}, you hit #{card_total}. #{thank_you_message}"
@@ -62,5 +62,11 @@ end
 def runner
   # code runner here
   welcome
+  initial_round
+  hit?
+  display_card_total
+  until display_card_total > 21
+
+  end
+end_game
 end
-98
