@@ -36,7 +36,7 @@ def initial_round()
   # code #initial_round here
   new_sum = deal_card
   new_sum += deal_card
-  puts /Your cards add up to /
+  puts /Your cards add up to /#{}{new_sum
   return new_sum
   rex = display_card_total()
   # puts"#{rex}"
@@ -71,4 +71,5 @@ def runner
   hit?
   display_card_total
 end_game
+
 end
