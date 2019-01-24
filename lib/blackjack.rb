@@ -7,9 +7,9 @@ def deal_card
   rand(1..11)
 end
 
-def display_card_total(card_total)
+def display_card_total(initial_round)
   # code #display_card_total here
- puts "Your cards add up to #{card_total}"
+ puts "Your cards add up to #{initial_round}"
 end
 
 def prompt_user
@@ -36,24 +36,20 @@ def initial_round()
   # code #initial_round here
   new_sum = deal_card
   new_sum += deal_card
-
+  puts /Your cards add up to /
   return new_sum
   rex = display_card_total()
-  puts"#{rex}"
+  # puts"#{rex}"
 end
 
 def hit?(display_card_total)
   # code hit? here
   prompt_user
   rtnd_inpt = get_user_input
-  if rtnd_inpt == "h"
-    deal_card
-  elsif rtnd_inpt !="s" || rtnd_inpt !="h"
-     invalid_command
-  end
-
-  # if get_user_input =='h'
+  # if rtnd_inpt == "h"
   #   deal_card
+  # elsif rtnd_inpt !="s" || rtnd_inpt !="h"
+  #    invalid_command
   # end
   return display_card_total
 
