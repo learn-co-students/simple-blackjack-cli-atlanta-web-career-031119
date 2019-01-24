@@ -20,7 +20,7 @@ end
 
 def get_user_input
   # code #get_user_input here
-  gets.chomp
+  return gets.chomp
 end
 
 def end_game(get_user_input)
@@ -36,14 +36,22 @@ def initial_round()
   # code #initial_round here
   new_sum = deal_card
   new_sum += deal_card
+
   return new_sum
-  puts"#{new_sum}"
+  rex = display_card_total()
+  puts"#{rex}"
 end
 
 def hit?(display_card_total)
   # code hit? here
   prompt_user
-  get_user_input
+  rtnd_inpt = get_user_input
+  if rtnd_inpt == "h"
+    deal_card
+  elsif rtnd_inpt !="s" || rtnd_inpt !="h"
+     invalid_command
+  end
+
   # if get_user_input =='h'
   #   deal_card
   # end
@@ -53,6 +61,7 @@ end
 
 def invalid_command
   # code invalid_command here
+  prompt_user
 end
 
 #####################################################
@@ -65,8 +74,5 @@ def runner
   initial_round
   hit?
   display_card_total
-  until display_card_total > 21
-
-  end
 end_game
 end
