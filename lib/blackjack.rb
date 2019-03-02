@@ -57,5 +57,12 @@ end
 #####################################################
 
 def runner
-  # code runner here
+  hand = 0
+  welcome
+  sleep(2)
+  hand += initial_round
+  until hand > 21
+    hand = hit?(hand)
+  end
+  end_game(hand)
 end
