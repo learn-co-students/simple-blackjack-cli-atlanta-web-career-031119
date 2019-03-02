@@ -28,6 +28,7 @@ def initial_round
     hand += deal_card
   end
   display_card_total(hand)
+  return hand
 end
 
 def hit?(card_total)
